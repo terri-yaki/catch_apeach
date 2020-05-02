@@ -9,9 +9,11 @@ import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +22,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity<INTRO> extends AppCompatActivity {
 
     // Frame
     private FrameLayout gameFrame;
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     // Image
     private ImageView box, black, orange, pink;
     private Drawable imageBoxRight, imageBoxLeft;
+
 
     // Size
     private int boxSize;
@@ -55,6 +58,12 @@ public class MainActivity extends AppCompatActivity {
     private boolean action_flg = false;
     private boolean pink_flg = false;
 
+    public MainActivity() {
+    }
+
+    //Button
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,8 +81,33 @@ public class MainActivity extends AppCompatActivity {
         scoreLabel = findViewById(R.id.scoreLabel);
         highScoreLabel = findViewById(R.id.highScoreLabel);
 
+
         imageBoxLeft = getResources().getDrawable(R.drawable.box_left);
         imageBoxRight = getResources().getDrawable(R.drawable.box_right);
+
+
+        final ImageView mepic = findViewById(R.id.mepic);
+        final TextView intro = findViewById(R.id.intro);
+
+        mepic.setVisibility(View.INVISIBLE);
+        intro.setVisibility(View.INVISIBLE);
+
+        Switch sw_intro;
+        sw_intro = findViewById(R.id.sw_intro);
+        final Switch finalSw_intro = sw_intro;
+        sw_intro.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked){
+                    mepic.setVisibility(View.VISIBLE);
+                    intro.setVisibility(View.VISIBLE);
+                }
+                else {
+                    mepic.setVisibility(View.INVISIBLE);
+                    intro.setVisibility(View.INVISIBLE);
+                }
+            }
+        });
 
         // High Score
         settings = getSharedPreferences("GAME_DATA", Context.MODE_PRIVATE);
@@ -230,7 +264,7 @@ public class MainActivity extends AppCompatActivity {
 
             SharedPreferences.Editor editor = settings.edit();
             editor.putInt("HIGH_SCORE", highScore);
-            editor.commit();
+            editor.apply();
         }
     }
 

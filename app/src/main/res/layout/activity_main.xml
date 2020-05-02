@@ -62,7 +62,7 @@
         <LinearLayout
             android:id="@+id/startLayout"
             android:layout_width="match_parent"
-            android:layout_height="600dp"
+            android:layout_height="670dp"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical">
@@ -99,16 +99,26 @@
                 android:onClick="quitGame"
                 android:text="Quit" />
 
+            <Switch
+                android:id="@+id/sw_intro"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Introduction "
+                android:textOff="hide"
+                android:textOn="show"
+                android:visibility="visible"
+                tools:checked="false" />
+
             <TextView
                 android:id="@+id/intro"
                 android:layout_width="356dp"
                 android:layout_height="wrap_content"
                 android:autoSizeTextType="uniform"
-                android:text="Introduction：\nSally and Apeach are dropping from the sky!\nCatch Sally (The orange one) to score marks, catch Apeach(The pink one) to expand the wall! Dont touch the bomb, or else something terrible will happen!\n\nThis application is made by Lee Ho Yu (20091368). Hold to move Ryan right, release to move left, Enjoy!\n"
-                android:visibility="visible" />
+                android:text="Introduction：\nSally and Apeach are dropping from the sky!\nCatch Sally (The orange one) to score marks, catch Apeach(The pink one) to expand the wall! Dont touch the bomb, or else something terrible will happen!\n\nThis application is made by Lee Ho Yu (20091368). Hold to move Ryan right, release to move left, Enjoy!\n" />
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/mepic"
                 android:layout_width="181dp"
                 android:layout_height="139dp"
                 app:srcCompat="@drawable/me" />
