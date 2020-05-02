@@ -62,7 +62,7 @@
         <LinearLayout
             android:id="@+id/startLayout"
             android:layout_width="match_parent"
-            android:layout_height="643dp"
+            android:layout_height="600dp"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical">
@@ -87,6 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
+                android:backgroundTint="#9C7B19"
                 android:onClick="startGame"
                 android:text="START" />
 
@@ -94,20 +95,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:backgroundTint="#FA5050"
                 android:onClick="quitGame"
                 android:text="Quit" />
 
             <TextView
                 android:id="@+id/intro"
-                android:layout_width="370dp"
-                android:layout_height="83dp"
+                android:layout_width="356dp"
+                android:layout_height="wrap_content"
                 android:autoSizeTextType="uniform"
-                android:text="                                                    Introduction：\nCatch Sally (The orange one) to score marks, catch Apeach(The pink one) to expand the wall! Dont touch the bomb! This application is made by Lee Ho Yu (20091368). Hold to move Ryan right, release to move left, Enjoy!" />
+                android:text="Introduction：\nSally and Apeach are dropping from the sky!\nCatch Sally (The orange one) to score marks, catch Apeach(The pink one) to expand the wall! Dont touch the bomb!\n\nThis application is made by Lee Ho Yu (20091368). Hold to move Ryan right, release to move left, Enjoy!\n"
+                android:visibility="visible" />
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="232dp"
-                android:layout_height="178dp"
+                android:layout_width="181dp"
+                android:layout_height="139dp"
                 app:srcCompat="@drawable/me" />
 
         </LinearLayout>
