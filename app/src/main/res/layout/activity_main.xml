@@ -104,7 +104,7 @@
                 android:layout_width="356dp"
                 android:layout_height="wrap_content"
                 android:autoSizeTextType="uniform"
-                android:text="Introduction：\nSally and Apeach are dropping from the sky!\nCatch Sally (The orange one) to score marks, catch Apeach(The pink one) to expand the wall! Dont touch the bomb!\n\nThis application is made by Lee Ho Yu (20091368). Hold to move Ryan right, release to move left, Enjoy!\n"
+                android:text="Introduction：\nSally and Apeach are dropping from the sky!\nCatch Sally (The orange one) to score marks, catch Apeach(The pink one) to expand the wall! Dont touch the bomb, or else something terrible will happen!\n\nThis application is made by Lee Ho Yu (20091368). Hold to move Ryan right, release to move left, Enjoy!\n"
                 android:visibility="visible" />
 
             <ImageView
