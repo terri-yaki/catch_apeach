@@ -99,10 +99,10 @@
 
             <TextView
                 android:id="@+id/intro"
-                android:layout_width="match_parent"
+                android:layout_width="370dp"
                 android:layout_height="83dp"
                 android:autoSizeTextType="uniform"
-                android:text="                                                    Introduction：\nCatch Sally to score marks, catch Apeach to expand the wall! Dont touch the bomb! This application is made by Lee Ho Yu (20091368). Hold to move Ryan right, release to move left, Enjoy!" />
+                android:text="                                                    Introduction：\nCatch Sally (The orange one) to score marks, catch Apeach(The pink one) to expand the wall! Dont touch the bomb! This application is made by Lee Ho Yu (20091368). Hold to move Ryan right, release to move left, Enjoy!" />
 
             <ImageView
                 android:id="@+id/imageView"
